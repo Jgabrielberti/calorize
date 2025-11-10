@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="1269.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282828;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="buscarAlimento" layoutX="763.0" layoutY="110.0" prefHeight="34.0" prefWidth="420.0" promptText="Buscar por alimento" style="-fx-background-color: #323232;" />
+            <ListView fx:id="listAlimentosNaoRecentes" layoutX="763.0" layoutY="172.0" prefHeight="520.0" prefWidth="420.0" style="-fx-background-color: #323232;" />
+
+            <Button fx:id="voltarTelaRefeicoesButton" layoutX="76.0" layoutY="41.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #03DAC5;" text="Voltar" textFill="WHITE">
+               <onAction>#voltarParaTelaRefeicoes</onAction>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ListView fx:id="listAlimentosRecentes" layoutX="76.0" layoutY="172.0" prefHeight="520.0" prefWidth="420.0" style="-fx-background-color: #323232;" />
+            <Label layoutX="182.0" layoutY="109.0" text="Alimentos Recentes" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="adicionarAlimentosRecentesButton" layoutX="206.0" layoutY="720.0" mnemonicParsing="false"
+                    prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #03DAC5;" text="Adicionar Alimento(s)" textFill="WHITE">
+               <onAction>#adicionarAlimentosRecentes</onAction>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="5.0" prefWidth="1269.0" style="-fx-background-color: #124345;" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="5.0" prefWidth="1269.0" style="-fx-background-color: #124345;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <AnchorPane prefHeight="844.0" prefWidth="5.0" style="-fx-background-color: #124345;" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <AnchorPane prefHeight="854.0" prefWidth="5.0" style="-fx-background-color: #124345;" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

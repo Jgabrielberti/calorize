@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="1269.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="874.0" prefWidth="885.0" style="-fx-background-color: #282828;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="280.0" layoutY="39.0" text="Editar Informações" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="116.0" layoutY="141.0" text="Usuario" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="116.0" layoutY="219.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="116.0" layoutY="286.0" text="Senha" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="110.0" layoutY="445.0" text="Altura (cm)" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="111.0" layoutY="384.0" text="Peso (kg)" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="375.0" layoutY="591.0" text="Meta Atual" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="109.0" layoutY="505.0" text="Gênero" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomeField" layoutX="298.0" layoutY="148.0" prefHeight="40.0" prefWidth="365.0" promptText="Seu nome" />
+            <TextField fx:id="emailField" layoutX="298.0" layoutY="219.0" prefHeight="40.0" prefWidth="365.0" />
+            <TextField fx:id="alturaField" layoutX="298.0" layoutY="445.0" prefHeight="40.0" prefWidth="275.0" promptText="Ex: 175" />
+            <TextField fx:id="pesoField" layoutX="298.0" layoutY="384.0" prefHeight="40.0" prefWidth="275.0" promptText="Ex 65" />
+            <PasswordField fx:id="senhaField" layoutX="298.0" layoutY="286.0" prefHeight="40.0" prefWidth="365.0" />
+            <Line endX="580.0" layoutX="223.0" layoutY="348.0" startX="-140.0" stroke="#ff0266" />
+            <Line endX="580.0" layoutX="223.0" layoutY="572.0" startX="-140.0" stroke="#ff0266" />
+            <Button fx:id="atualizarDadosButton" layoutX="382.0" layoutY="770.0" mnemonicParsing="false" style="-fx-background-color: #ff0266;" text="Atualizar" textFill="WHITE">
+               <onAction>#atualizaDadosUsuario</onAction>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Line endX="580.0" layoutX="215.0" layoutY="731.0" startX="-140.0" stroke="#ff0266" />
+            <RadioButton fx:id="genMasculino" layoutX="298.0" layoutY="517.0" mnemonicParsing="false" text="Masculino" textFill="WHITE">
+               <onAction>#getGenero</onAction>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genero" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="genFeminino" layoutX="439.0" layoutY="517.0" mnemonicParsing="false" text="Feminino" textFill="WHITE" toggleGroup="$genero">
+               <onAction>#getGenero</onAction>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="genOutro" layoutX="573.0" layoutY="517.0" mnemonicParsing="false" text="Prefiro não dizer" textFill="WHITE" toggleGroup="$genero">
+               <onAction>#getGenero</onAction>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="metaPerderPeso" layoutX="83.0" layoutY="667.0" mnemonicParsing="false" text="Perder Peso" textFill="WHITE">
+               <onAction>#getMeta</onAction>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="meta" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="metaManterPeso" layoutX="385.0" layoutY="667.0" mnemonicParsing="false" text="Manter Peso" textFill="WHITE" toggleGroup="$meta">
+               <onAction>#getMeta</onAction>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="metaGanharPeso" layoutX="678.0" layoutY="667.0" mnemonicParsing="false" text="Ganhar Peso" textFill="WHITE" toggleGroup="$meta">
+               <onAction>#getMeta</onAction>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="voltarTelaPrincipalButton" layoutX="60.0" layoutY="49.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="80.0" style="-fx-background-color: #ff0266;" text="Voltar" textFill="WHITE">
+               <onAction>#voltarParaTelaPrincipal</onAction>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="27.0" layoutY="835.0" text="*Apenas preencha o que deseja mudar" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="384.0" style="-fx-background-color: #ff0266;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="104.0" layoutY="832.0" text="Copyright (c). All Rights Reserved" textFill="WHITE" />
+            <Label layoutX="122.0" layoutY="131.0" text="Calorize" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="160.0" prefHeight="104.0" prefWidth="295.0" text="Seu App de nutrição personalizável" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

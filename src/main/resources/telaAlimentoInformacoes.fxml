@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="1269.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="774.0" prefWidth="991.0" style="-fx-background-color: #323232;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="nomeAlimento" layoutX="582.0" layoutY="42.0" text="Alimento" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="456.0" text="Proteínas" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="581.0" text="Carboidratos" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="693.0" text="Gorduras" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="graficoMacros" layoutX="630.0" layoutY="207.0" prefHeight="451.0" prefWidth="564.0" style="-fx-background-color: #282828;" />
+            <Label layoutX="67.0" layoutY="334.0" text="Calorias" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="222.0" text="Quantidade" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="quantidadeGramas" layoutX="266.0" layoutY="226.0" prefHeight="25.0" prefWidth="180.0" promptText="Insira a quantidade em gramas" />
+            <Label fx:id="quantidadeCalorias" layoutX="295.0" layoutY="335.0" text="g" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="quantidadeProteinas" layoutX="289.0" layoutY="457.0" text="g" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="quantidadeCarboidratos" layoutX="289.0" layoutY="582.0" text="g" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="quantidadeGorduras" layoutX="289.0" layoutY="694.0" text="g" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="adicionarAlimentoARefeicaoButton" layoutX="530.0" layoutY="762.0" mnemonicParsing="false"
+                    prefHeight="44.0" prefWidth="200.0" style="-fx-background-color: #03DAC5;" text="Adicionar Alime
+                    nto" textFill="WHITE">
+               <onAction>#handleAdicionarAlimentoARefeicao</onAction>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelarButton" layoutX="63.0" layoutY="59.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="85.0" style="-fx-background-color: #03DAC5;" text="Voltar" textFill="WHITE">
+               <onAction>#voltarParaTelaAdicionarAlimento</onAction>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="844.0" prefWidth="5.0" style="-fx-background-color: #124345;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="854.0" prefWidth="5.0" style="-fx-background-color: #124345;" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <AnchorPane prefHeight="5.0" prefWidth="1269.0" style="-fx-background-color: #124345;" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="5.0" prefWidth="1269.0" style="-fx-background-color: #124345;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
